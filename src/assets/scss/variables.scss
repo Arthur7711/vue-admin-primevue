@@ -1,0 +1,105 @@
+@import "@/assets/fonts/SourceSansPro.scss";
+
+$main-green: #509574;
+$main-grey: #999999;
+$main-blue: #1565c0;
+$main-pink: #c2185b;
+$main-orange: #f57c00;
+$border-gray: #e3e3e3;
+$success-green: #689f38;
+$text-black: #1a1a1a;
+
+@mixin Font-24-30-700() {
+  font-family: "Source Sans Pro";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.4;
+}
+
+@mixin Font-24-18-700() {
+  font-family: "Source Sans Pro";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 18px;
+}
+
+@mixin Font-16-25-400() {
+  font-family: "Source Sans Pro";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 25px;
+}
+
+@mixin Font-18-22-600() {
+  font-family: "Source Sans Pro";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+@mixin Font-14-18-400() {
+  font-family: "Source Sans Pro";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+@mixin Font-12-22-400() {
+  font-family: "Source Sans Pro";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 22px;
+}
+
+@mixin sliceText() {
+  position: relative;
+  white-space: nowrap;
+  overflow: hidden;
+
+  &:before {
+    position: absolute;
+    content: "";
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0) calc(100% - 40px),
+      rgba(255, 255, 255, 1) 100%
+    );
+    pointer-events: none;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+}
+
+@mixin hover-link() {
+  transition: color 0.3s;
+
+  &:hover {
+    color: $main-blue;
+  }
+}
+
+@mixin btn-style() {
+  & :deep(.ant-btn) {
+    max-width: 420px;
+    width: 100%;
+    padding: 6px 15px;
+    height: auto;
+    border-radius: 10px;
+    background-color: #1565c0;
+    font-size: 18px;
+    font-weight: 600;
+    transition: transform 0.2s;
+
+    &:active {
+      transform: scale(0.9);
+    }
+  }
+}

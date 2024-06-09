@@ -1,0 +1,25 @@
+.select {
+  &__dropdown-item {
+    min-height: 30px !important;
+    padding: 5px 8px !important;
+    border-radius: 7px;
+    line-height: 1;
+
+    img {
+      margin-right: 4px;
+      margin-bottom: 4px;
+    }
+
+    &:hover {
+      background-color: rgba(102, 102, 102, 0.20) !important;
+    }
+
+    .ant-select-item-option-content {
+      line-height: 1.2 !important;
+    }
+  }
+
+  &__dropdown-item+&__dropdown-item {
+    margin-top: 4px;
+  }
+}
